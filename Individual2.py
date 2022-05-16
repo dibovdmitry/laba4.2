@@ -21,8 +21,8 @@ class Hex:
             self.storage.append(k)
 
     def __add__(self, other):
-        num1 = self.storage[::-1]
-        num2 = other.storage[::-1]
+        num1 = self.storage[::1]
+        num2 = other.storage[::1]
         num1 = int("".join(num1), 16)
         num2 = int("".join(num2), 16)
         sum_str = hex(num1 + num2)
@@ -30,11 +30,11 @@ class Hex:
         for k in sum_str:
             sum_lst.append(k)
         self.length(sum_lst)
-        return "".join(sum_lst[::-1])
+        return "".join(sum_lst[::1])
 
     def __sub__(self, other):
-        num1 = self.storage[::-1]
-        num2 = other.storage[::-1]
+        num1 = self.storage[::1]
+        num2 = other.storage[::1]
         num1 = int("".join(num1), 16)
         num2 = int("".join(num2), 16)
         sum_str = hex(num1 - num2)
@@ -42,11 +42,11 @@ class Hex:
         for k in sum_str:
             sum_lst.append(k)
         self.length(sum_lst)
-        return "".join(sum_lst[::-1])
+        return "".join(sum_lst[::1])
 
     def __mul__(self, other):
-        num1 = self.storage[::-1]
-        num2 = other.storage[::-1]
+        num1 = self.storage[::1]
+        num2 = other.storage[::1]
         num1 = int("".join(num1), 16)
         num2 = int("".join(num2), 16)
         sum_str = hex(num1 * num2)
@@ -54,25 +54,25 @@ class Hex:
         for k in sum_str:
             sum_lst.append(k)
         self.length(sum_lst)
-        return "".join(sum_lst[::-1])
+        return "".join(sum_lst[::1])
 
     def __lt__(self, other):
-        num1 = self.storage[::-1]
-        num2 = other.storage[::-1]
+        num1 = self.storage[::1]
+        num2 = other.storage[::1]
         num1 = int("".join(num1), 16)
         num2 = int("".join(num2), 16)
         return num1 < num2
 
     def __gt__(self, other):
-        num1 = self.storage[::-1]
-        num2 = other.storage[::-1]
+        num1 = self.storage[::1]
+        num2 = other.storage[::1]
         num1 = int("".join(num1), 16)
         num2 = int("".join(num2), 16)
         return num1 > num2
 
     def __eq__(self, other):
-        num1 = self.storage[::-1]
-        num2 = other.storage[::-1]
+        num1 = self.storage[::1]
+        num2 = other.storage[::1]
         num1 = int("".join(num1), 16)
         num2 = int("".join(num2), 16)
         return num1 == num2
