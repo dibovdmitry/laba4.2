@@ -84,11 +84,11 @@ class Hex:
 
 
 if __name__ == '__main__':
-    r1 = Hex("2F")
-    r2 = Hex("30")
-    print(f"r1 + r2 = {r1 + r2}")
-    print(f"r1 - r2 = {r1 - r2}")
-    print(f"r1 * r2 = {r1 * r2}")
-    print(f"r1 < r2 = {r1 < r2}")
-    print(f"r1 > r2 = {r1 > r2}")
-    print(f"r1 == r2 = {r1 == r2}")
+    n1 = Hex("2F")
+    n2 = Hex("2E")
+    print(f"n1 + n2 = {n1 + n2}")
+    print(f"n1 - n2 = {n1 - n2}")
+    print(f"n1 * n2 = {n1 * n2}")
+    print(f"n1 < n2 = {n1 < n2}")
+    print(f"n1 > n2 = {n1 > n2}")
+    print(f"n1 == n2 = {n1 == n2}")
